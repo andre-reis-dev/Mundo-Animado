@@ -18,8 +18,9 @@
     display: none;
 }
 
-.activate {
+.dots-container > .activate {
     background-color: var(--cor3);
+    opacity: 1;
 }
 .dots-container {
     display: inline-flex;

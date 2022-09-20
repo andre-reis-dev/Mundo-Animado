@@ -4,21 +4,20 @@ function receiveValues (value) {
     slideIndex = value
 }
 
-toggleImages(slideIndex)
+toggleImages()
 
-function toggleImages (n) {
-    let i;
+function toggleImages () {
     let images = document.getElementsByClassName('slide')
     let buttons = document.getElementsByClassName('dots')
 
-    if (n > images.length - 1) {
+    if (slideIndex > images.length - 1) {
         slideIndex = 0
     }
 
-    for (i = 0; i < images.length; i++) {
+    for (let i = 0; i < images.length; i++) {
         images[i].style.display = 'none'
     }
-    for (i = 0; i < buttons.length; i++) {
+    for (let i = 0; i < buttons.length; i++) {
         buttons[i].classList.remove('activate')
     }
 
