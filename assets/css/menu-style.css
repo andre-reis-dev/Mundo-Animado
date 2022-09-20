@@ -33,6 +33,7 @@ body {
   'opsz' 48;
   color: var(--cor2);
   font-size: 40px;
+  width: 100%;
 }
 
 .material-symbols-outlined:hover {
@@ -41,7 +42,7 @@ body {
     transition: .5s;
 }
 
-/* home icon */
+/* menu icons */
 .material-symbols-rounded {
   font-variation-settings:
   'FILL' 0,
@@ -69,14 +70,17 @@ a{
 }
 
 nav {
-    padding: 10px 0px;
     background-color: #000;
+    text-align: center;
 }
 #menu {
     background-color: #000;
     display: none;
     color: var(--cor1);
-    transition: all .5s;
+    width: 100%;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    overflow: hidden;
 }
 #menu > li {
     display: inline-flex;
@@ -85,7 +89,11 @@ nav {
     font-weight: bold;
     width: 100%;
     align-items: center;
+    justify-content: center;
 } 
+#menu > li:last-child {
+    margin-bottom: 6px;
+}
 #menu > li > .menu-option {
     color: var(--cor1);
     display: inline-flex;
@@ -94,6 +102,8 @@ nav {
     margin-top: 0;
     height: 49px;
     font-size: 16px;
+    width: 100px;
+    text-align: center;
 }
 #menu > li > .icons {
     color: var(--cor1);
@@ -106,4 +116,12 @@ nav {
 }
 #menu > li:hover {
     cursor: pointer;
+}
+
+@keyframes showMenu {
+    from {
+        height: 0px;
+    } to {
+        height: 320px;
+    }
 }

@@ -1,0 +1,41 @@
+:root {
+    --cor1: #FAAC0D;
+    --cor2: #DE820B;
+    --cor3: #F46400;
+    --cor4: #DE440B;
+    --cor5: #FA2A0D;
+}
+
+.slider {
+    height: 230px;
+    margin-top: 10px;
+    width: 100%;
+}
+.slider > img {
+    width: 100%;
+}
+.slide:not(:first-child) {
+    display: none;
+}
+
+.activate {
+    background-color: var(--cor3);
+}
+.dots-container {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: -40px;
+}
+.dots-container > .dots {
+    background-color: transparent;
+    border: 2px solid var(--cor3);
+    border-radius: 50%;
+    height: 13px;
+    width: 13px;
+    
+}
+
+.dots-container > .dots:not(:last-child) {
+    margin-right: 15px;
+}
